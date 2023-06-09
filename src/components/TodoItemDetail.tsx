@@ -1,32 +1,21 @@
-import { Todo } from '../interfaces/todo.interface'
+import { Todo } from "../interfaces/todo.interface";
 
 type TodoItemDetailProps = {
   todo: Todo;
 };
 
 export default function TodoItemDetail({ todo }: TodoItemDetailProps) {
-  const title = todo.completed ? (
-    <s>{todo.title}</s>
-  ) : (
-    <strong>{todo.title}</strong>
-  );
-
-  const description = todo.completed ? (
-    <s>{todo.description}</s>
-  ) : (
-    <strong>{todo.description}</strong>
-  );
+  const completedStyle = {
+    textDecoration: todo.completed ? "line-through" : "none",
+    fontWeight: todo.completed ? "normal" : "bold",
+    color: todo.completed ? "red" : "black",
+    textAlign: "left",
+  } as React.CSSProperties;
 
   return (
-    <div
-      style={{
-        color: todo.completed ? "red" : "black",
-        textAlign: "left",
-      }}
-    >
-      <div>{title}</div>
-      <div>{description}</div>
+    <div style={completedStyle}>
+      <p>{todo.title}</p>
+      <p>{todo.description}</p>
     </div>
   );
 }
-
