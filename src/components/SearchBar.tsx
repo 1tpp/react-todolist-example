@@ -1,5 +1,3 @@
-import React from "react";
-
 type SearchBarProps = {
   filterText: string;
   isOnlyCompleted: boolean;

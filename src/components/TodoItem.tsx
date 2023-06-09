@@ -1,4 +1,3 @@
-import React from "react";
 import { Todo } from "../interfaces/todo.interface";
 import TodoItemDetail from "./TodoItemDetail";
 
