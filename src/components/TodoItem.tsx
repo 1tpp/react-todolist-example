@@ -1,5 +1,6 @@
 import React from "react";
 import { Todo } from "../interfaces/todo.interface";
+import TodoItemDetail from "./TodoItemDetail";
 
 type TodoItemProps = {
   todo: Todo;
@@ -7,29 +8,11 @@ type TodoItemProps = {
   onTodoChange: (todoId: number) => void;
 };
 
-function TodoCompleted(todo: Todo) {
-  return (
-    <div style={{ color: "red", textAlign: "left" }}>
-      <p style={{ textDecoration: "line-through" }}>{todo.title}</p>
-      <p style={{ textDecoration: "line-through" }}>{todo.description}</p>
-    </div>
-  );
-}
-
 export default function TodoItem({
   todo,
   onTodoDelete,
   onTodoChange,
 }: TodoItemProps) {
-  const todoDetials = todo.completed ? (
-    TodoCompleted(todo)
-  ) : (
-    <div style={{ textAlign: "left" }}>
-      <p>{todo.title}</p>
-      <p>{todo.description}</p>
-    </div>
-  );
-
   return (
     <li className="TodoItem">
       <input
@@ -37,8 +20,9 @@ export default function TodoItem({
         checked={todo.completed}
         onChange={() => onTodoChange(todo.id)}
       />
-      {todoDetials}
+      <TodoItemDetail todo={todo} />
       <button onClick={() => onTodoDelete(todo.id)}>Delete</button>
     </li>
   );
 }
+
