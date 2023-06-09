@@ -1,0 +1,108 @@
+
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.SearchBar {
+  display: flex;
+  flex-direction: column;
+}
+
+.SearchBar input {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.SearchBar input:focus {
+  outline: none;
+}
+.SearchBar input::placeholder {
+  color: #ccc;
+}
+.SearchBar div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.TodoForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.TodoForm input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;  
+  margin-right: 1rem;
+}
+
+.TodoForm input:focus {
+  outline: none;
+}
+
+.TodoForm input::placeholder {
+  color: #ccc;
+}
+
+.TodoForm button {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.TodoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TodoItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.TodoItem input {
+  margin-right: 1rem;
+}
+
+.TodoItem div {
+  flex-grow: 1;
+}
+
+.TodoItem button {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+}
