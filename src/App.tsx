@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Todo, NewTodo } from "./interfaces/todo.interface";
 
 import TodoForm from "./components/TodoForm";
