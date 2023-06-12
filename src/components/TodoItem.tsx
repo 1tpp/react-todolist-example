@@ -3,8 +3,8 @@ import TodoItemDetail from "./TodoItemDetail";
 
 type TodoItemProps = {
   todo: Todo;
-  onTodoDelete: (todoId: number) => void;
-  onTodoChange: (todoId: number) => void;
+  onTodoDelete: (todoId: string) => void;
+  onTodoChange: (todoId: string) => void;
 };
 
 export default function TodoItem({

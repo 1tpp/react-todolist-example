@@ -7,8 +7,8 @@ import TodoList from "./TodoList";
 
 type FilterableTodoListProps = {
   todos: Todo[];
-  onTodoDelete: (todoId: number) => void;
-  onTodoChange: (todoId: number) => void;
+  onTodoDelete: (todoId: string) => void;
+  onTodoChange: (todoId: string) => void;
 };
 
 export default function FilterableTodoList({
